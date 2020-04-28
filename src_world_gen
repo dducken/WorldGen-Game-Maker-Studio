@@ -1,0 +1,19 @@
+var fill;
+
+if x < room_width
+{
+   for (i=0; i < room_height-y; i+=16)
+   {
+         fill= obj_dirt
+     if i > 16*choose (3,4,5)
+     {
+         fill= obj_stone
+     }
+     
+     instance_create(x,y,obj_grass)
+     instance_create(x,y+i,fill)
+     
+   }
+   x+=16
+   y+=16*round(random(choose(1,2)))*choose(1,-1)
+}
